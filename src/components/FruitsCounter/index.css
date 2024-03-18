@@ -1,0 +1,51 @@
+.container {
+  background-color: #ffd569;
+  font-family: Roboto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  height: 85%;
+  width: 85%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.heading {
+  color: black;
+  font-size: 45px;
+  font-weight: bold;
+}
+.num {
+  color: #ffd569;
+}
+img {
+  height: 350px;
+}
+.btn {
+  background-color: #007bff;
+  color: white;
+  height: 40px;
+  width: 110px;
+  align-self: center;
+  border-width: 0px;
+  margin-top: 30px;
+  border-radius: 05px;
+  cursor: pointer;
+  outline: none;
+}
+.fruits-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+}
