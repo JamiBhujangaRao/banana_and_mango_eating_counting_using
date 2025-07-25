@@ -1,131 +1,183 @@
-In this project, let's build a **Fruits Counter** by applying the concepts we have learned till now.
+# Tech News Agent
 
-### Refer to the image below:
+Create an ElevenLabs conversational AI agent that makes friendly outbound calls with the latest tech updates!
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/fruits-counter-output.gif" alt="fruits-counter" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+## Features
 
-### Design Files
+🎯 **Friendly Tone** - Sounds like a helpful colleague, not a sales rep  
+🚀 **Tech Updates** - Latest in AI, programming, and job opportunities  
+👩 **Female Voice** - Uses Alexandra, a confident and friendly female voice  
+💬 **Smart Script** - Always asks permission: "Hey, I've got some quick tech updates for you — should I go ahead?"
 
-<details>
-<summary>Click to view</summary>
+## Quick Start
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/fruits-counter-sm-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/fruits-counter-lg-output.png)
+### Prerequisites
 
-</details>
+- Node.js (version 10.13 or higher)
+- npm or pnpm
+- ElevenLabs API key
 
-### Set Up Instructions
+### Installation
 
-<details>
-<summary>Click to view</summary>
+1. **Clone or download this project**
+   ```bash
+   git clone <your-repo-url>
+   cd tech-news-agent
+   ```
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   pnpm install
+   ```
 
-### Completion Instructions
+3. **Start the development server**
+   ```bash
+   npm start
+   # or
+   pnpm start
+   ```
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-The app must have the following functionalities
+### Getting Your ElevenLabs API Key
 
-- Initially, the count of the eaten mangoes and bananas should be 0
-- When **Eat Mango** is clicked the count of the mangoes eaten should be incremented by 1
-- When **Eat Banana** is clicked the count of the bananas eaten should be incremented by 1
+1. Sign up at [ElevenLabs](https://elevenlabs.io)
+2. Go to your [Profile Settings](https://elevenlabs.io/app/settings/api-keys)
+3. Generate a new API key
+4. Copy and paste it into the app
 
-</details>
+## How It Works
 
-<details>
-<summary>Implementation Files</summary>
-<br/>
+1. **Enter your ElevenLabs API key** in the secure input field
+2. **Click "Create Tech News Agent"** to set up your AI agent
+3. **Your agent is ready!** It will be configured with:
+   - Friendly, confident female voice (Alexandra)
+   - Tech news script covering AI, programming, and job opportunities
+   - Conversational prompts that ask permission before sharing updates
+   - Professional tone that sounds like a helpful colleague
 
-Use these files to complete the implementation:
+## Agent Configuration
 
-- `src/components/FruitsCounter/index.js`
-- `src/components/FruitsCounter/index.css`
-</details>
+The agent is pre-configured with:
 
-### Quick Tips
+- **Voice**: Alexandra (kdmDKE6EkgrWrrykO9Qt) - realistic, young female voice
+- **Personality**: Confident, friendly, tech-savvy colleague
+- **Content**: AI news, programming updates, job market trends
+- **Opening**: "Hey, I've got some quick tech updates for you — should I go ahead?"
 
-<details>
-<summary>Click to view</summary>
-<br>
+## Sample Content
 
-- **State updates are merged**. It means that when you update only one key-value pair in the `state` object, it will not affect the other key-value pairs in the state object.
+The agent delivers updates on:
 
-  For example let's say your state is as followed:
+- **AI News**: Latest model releases, capabilities, coding assistants
+- **Programming**: React 18, Next.js 14, TypeScript adoption trends
+- **Job Market**: Demand for AI engineers, full-stack developers, hot skills
 
-  ```
-  state = { key1 : value1, key2 : value2 }
-  ```
+## Tech Stack
 
-  If you use this.setState such as :
+- **Frontend**: React 17, Modern CSS with gradients and animations
+- **API**: ElevenLabs Conversational AI API
+- **HTTP Client**: Axios for API requests
+- **Styling**: Custom CSS with responsive design
 
-  ```
-  this.setState(prevState => ({key1: prevState + valueN}))
-  ```
+## Project Structure
 
-  Your new state will be :
+```
+src/
+├── components/
+│   └── TechNewsAgent/
+│       ├── index.js       # Main component with ElevenLabs integration
+│       └── index.css      # Modern styling and animations
+├── App.js                 # Main app component
+├── App.css               # Global styles
+└── index.js              # React entry point
+```
 
-  ```
-  state = { key1 : value3, key2 : value2 }
-  ```
+## Customization
 
-- You can use the below cursor CSS property for buttons to set the type of mouse cursor, to show when the mouse pointer is over an element,
+### Voice Selection
+To use a different voice, replace the `voice_id` in `src/components/TechNewsAgent/index.js`:
 
-  ```
-    cursor: pointer;
-  ```
+```javascript
+voice_id: "kdmDKE6EkgrWrrykO9Qt" // Replace with your preferred voice ID
+```
 
-  <br/>
-   <img src="https://assets.ccbp.in/frontend/content/react-js/cursor-pointer-img.png" alt="cursor pointer" style="width:100px" />
+### Content Updates
+Modify the `agent_prompt` in the same file to customize:
+- Personality traits
+- Content focus areas
+- Speaking style
+- Opening messages
 
-- You can use the below outline CSS property for buttons and input elements to remove the highlighting when the elements are clicked,
+### Styling
+Update `src/components/TechNewsAgent/index.css` to change:
+- Color scheme
+- Layout
+- Animations
+- Responsive breakpoints
 
-  ```
-    outline: none;
-  ```
+## ElevenLabs Integration
 
-</details>
+This app uses the ElevenLabs Conversational AI API to:
 
-### Resources
+1. **Create agents** via `/v1/convai/agents` endpoint
+2. **Configure voice settings** for optimal conversational quality
+3. **Set conversation prompts** for consistent, engaging interactions
+4. **Manage agent lifecycle** (create/delete as needed)
 
-<details>
-<summary>Image URLs</summary>
+## Security Notes
 
-- [https://assets.ccbp.in/frontend/react-js/mango-img.png](https://assets.ccbp.in/frontend/react-js/mango-img.png) alt should be **mango**
-- [https://assets.ccbp.in/frontend/react-js/banana-img.png](https://assets.ccbp.in/frontend/react-js/banana-img.png) alt should be **banana**
+- API keys are handled securely (password input type)
+- Keys are only stored in component state (not persisted)
+- All API calls use HTTPS
+- Agent creation requires explicit user action
 
-</details>
+## Development
 
-<details>
-<summary>Colors</summary>
+### Available Scripts
 
-<br/>
+- `npm start` - Start development server
+- `npm build` - Build for production
+- `npm test` - Run test suite
+- `npm run lint` - Check code quality
 
-<div style="background-color: #ffd569 ; width: 150px; padding: 10px; color: black">Hex: #ffd569</div>
-<div style="background-color: #ffffff ; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #000000 ; width: 150px; padding: 10px; color: white">Hex: #000000</div>
-<div style="background-color: #007bff ; width: 150px; padding: 10px; color: white">Hex: #007bff</div>
+### Adding Features
 
-</details>
+Some ideas for enhancements:
+- Save API key to local storage (with encryption)
+- Add more voice options
+- Create multiple agent templates
+- Add scheduling for automated calls
+- Export agent configurations
 
-<details>
-<summary>Font-families</summary>
+## Troubleshooting
 
-- Roboto
+### Common Issues
 
-</details>
+**"Please enter your ElevenLabs API key"**
+- Ensure you've entered a valid API key from your ElevenLabs account
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+**"Error creating agent: 401 Unauthorized"**
+- Check that your API key is correct and has sufficient permissions
+- Verify your ElevenLabs account has access to Conversational AI features
+
+**"Error creating agent: Network Error"**
+- Check your internet connection
+- Ensure CORS is properly configured if running in production
+
+### Support
+
+- [ElevenLabs Documentation](https://elevenlabs.io/docs)
+- [ElevenLabs Community](https://discord.gg/elevenlabs)
+- [API Reference](https://elevenlabs.io/docs/api-reference)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+**Built with ❤️ using ElevenLabs AI Voice Technology**
